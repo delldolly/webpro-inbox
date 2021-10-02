@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+}
+
+.bg-container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.inbox-container {
+    width: 80%;
+    height: 95%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Left Component */
+.user-online {
+    width: 35%;
+    height: 100%;
+    background-color: #BFC9CA;
+    margin: 0 10px;
+    border-radius: 20px;
+}
+
+.user-online-header, .message-username {
+    font-size: 2vmax;
+    font-weight: 600;
+    height: 70px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+}
+
+/* Chat select */
+.user-message-select {
+    height: calc(100% - 90px);
+    overflow: auto;
+    padding: 0 15px;
+}
+
+.user-box {
+    height: auto;
+    padding: 10px 15px;
+    display: flex;
+    /* active */
+    background-color: #D5DBDB;
+    border-radius: 10px;
+}
+
+.user-box:active {
+    background-color: #D5DBDB;
+    border-radius: 10px;
+}
+
+.user-box>.user-proflie {
+    width: 4vmax;
+    height: 4vmax;
+    position: relative;
+}
+
+.user-box>.user-proflie .online-status {
+    background-color: #DFFF00;
+    width: 1vmax;
+    height: 1vmax;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.user-box>.user-info {
+    width: calc(100% - 4vmax);
+    height: auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-info-name {
+    font-size: 1.5vmax;
+    font-weight: 600;
+}
+
+.user-info-message {
+    font-size: 1vmax;
+    font-weight: 400;
+}
+
+
+/* Right Component */
+.message-show {
+    width: 65%;
+    height: 100%;
+    background-color: #D5DBDB;
+    margin: 0 10px;
+    border-radius: 20px;
+}
+
+/* Message none */
+.message-none-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.message-exp-ico {
+    width: 5vmax;
+}
+
+.message-exp-text {
+    font-size: 1.5vmax;
+    padding-top: 20px;
+}
+/* End Message none */
+
+/* Message show */
+.message-show-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.message-username {
+    border-bottom: 3px solid #BFC9CA;
+}
+
+.message-cont {
+    height: calc(100% - 70px - 3vmax);
+    overflow-y: auto;
+}
+
+.message-box {
+    width: auto;
+    min-height: 4vmax;
+    padding: 10px 30px;
+}
+
+.partner-box {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.partner-box > .user-proflie {
+    height: 3.8vmax;
+    padding-right: 15px;
+}
+
+.partner-box > .partner-msg {
+    display: flex;
+    align-items: center;
+    min-height: 60%;
+    max-width: 70%;
+    font-size: 1.2vmax;
+    padding: 5px 15px;
+    border: 2px solid tomato;
+    border-radius: 15px 15px 15px 0;
+    word-break: break-all;
+}
+
+.partner-box > .blank-box {
+    min-width: 2vmax;
+    height: 100%;
+}
+
+.owner-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.owner-box > .owner-msg {
+    display: flex;
+    align-items: center;
+    min-height: 60%;
+    width: auto;
+    font-size: 1.2vmax;
+    padding: 5px 15px;
+    border: 2px solid tomato;
+    border-radius: 15px 15px 0 15px;
+    word-break: break-all;
+}
+
+.owner-box > .blank-box {
+    min-width: 2vmax;
+    height: 100%;
+}
+
+/* Input */
+.message-send {
+    height: 3vmax;
+    padding: 15px 30px;
+}
+
+.message-send-area {
+    /* width: 100%; */
+    height: 100%;
+    padding: 0 10px;
+    background-color: #ECF0F1;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text-input {
+    width: calc(95% - 4vmax);
+    height: 80%;
+    background-color: transparent;
+    border: none;
+    text-align: right;
+    font-size: 1.2vmax;
+    outline: transparent;
+}
+
+.send-btn {
+    background-color: #DFFF00;
+    width: 4vmax;
+    height: 80%;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+/* End Message show */
