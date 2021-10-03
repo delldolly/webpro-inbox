@@ -20,8 +20,8 @@
                 <!-- Chat select -->
                 <div class="user-message-select">
 
-                    <!-- user here -->
-                    <div class="user-box">
+                    <!-- user select here -->
+                    <div class="user-box" id="user" onclick="openChat()">
 
                         <!-- Profile -->
                         <div class="user-proflie">
@@ -42,7 +42,7 @@
                         </div>
 
                     </div>
-                    <!-- end -->
+                    <!-- end user -->
 
                 </div>
             </div>
@@ -50,7 +50,7 @@
             <div class="message-show">
 
                 <!-- None message show -->
-                <div class="message-none-wrapper">
+                <div id="message-none" class="message-none-wrapper">
                     <div class="message-exp-ico">
                         <img src="../img/comment.png" width="100%" />
                     </div>
@@ -58,10 +58,73 @@
                         Your message here
                     </div>
                 </div>
+                <!-- End message none -->
+
+                <!-- Message show -->
+                <div id="message-show" class="message-show-wrapper">
+
+                    <!-- Partner's name -->
+                    <div class="message-username">
+                        Jome
+                    </div>
+
+                    <!-- Message dialog -->
+                    <div class="message-cont">
+
+                        <!-- Partner massage (Left) -->
+                        <div class="message-box partner-box">
+
+                            <!-- Profile -->
+                            <div class="user-proflie">    
+                                <img src="../img/new-moon.png" alt="proflie" height="100%" />
+                            </div>
+
+                            <!-- Message text -->
+                            <div class="partner-msg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum elementum interdum. Nam arcu erat, gravida eget aliquet nec, accumsan eget odio.
+                            </div>
+                            
+                            <div class="blank-box"></div>
+
+                        </div>
+
+                        <!-- Owner message (Right) -->
+                        <div class="message-box owner-box">
+
+                            <div class="blank-box"></div>
+
+                            <!-- Message text -->
+                            <div class="owner-msg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Input -->
+                    <div class="message-send">
+                        <div class="message-send-area">
+                            <input type="text" class="text-input" placeholder="Message here...">
+                            <button class="send-btn">
+                                <img src="../img/paper-plane.png" alt="" height="60%">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End message show -->
 
             </div>
         </div>
     </div>
+
+    <script>
+        function openChat() {
+            document.getElementById("message-show").style.visibility = 'visible';
+            document.getElementById("message-none").style.visibility = 'hidden';
+            document.getElementById("user").classList.add('active');
+        }
+    </script>
+
 </body>
 
 </html>

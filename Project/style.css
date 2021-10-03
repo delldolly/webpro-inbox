@@ -52,11 +52,11 @@ body {
     padding: 10px 15px;
     display: flex;
     /* active */
-    background-color: #D5DBDB;
-    border-radius: 10px;
+    /* background-color: #D5DBDB;
+    border-radius: 10px; */
 }
 
-.user-box:active {
+.user-box.active {
     background-color: #D5DBDB;
     border-radius: 10px;
 }
@@ -100,6 +100,7 @@ body {
 
 /* Right Component */
 .message-show {
+    position: relative;
     width: 65%;
     height: 100%;
     background-color: #D5DBDB;
@@ -108,7 +109,16 @@ body {
 }
 
 /* Message none */
+#message-none {
+    visibility: visible;
+}
+
 .message-none-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #BFC9CA;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,6 +138,10 @@ body {
 /* End Message none */
 
 /* Message show */
+#message-show {
+    visibility: hidden;
+}
+
 .message-show-wrapper {
     display: flex;
     flex-direction: column;
